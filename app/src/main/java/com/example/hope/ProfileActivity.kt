@@ -13,8 +13,8 @@ import androidx.appcompat.app.AppCompatActivity
 class ProfileActivity : AppCompatActivity() {
     private lateinit var profileImageView: ImageView
     private lateinit var welcomeTextView: TextView
-    private lateinit var academicsButton: Button
-    private lateinit var aboutCollegeButton: Button
+    private lateinit var academicsButton: TextView
+    private lateinit var aboutCollegeButton: TextView
     private val REQUEST_IMAGE_CAPTURE = 1
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,6 +30,8 @@ class ProfileActivity : AppCompatActivity() {
         val username = intent.getStringExtra("USERNAME")
         welcomeTextView.text = "Hi,\n$username"
 
+
+
         // Set up the profile image view to allow changing the profile photo
         profileImageView.setOnClickListener {
             dispatchTakePictureIntent()
@@ -37,11 +39,13 @@ class ProfileActivity : AppCompatActivity() {
 
         // Set up buttons for navigating to other activities
         academicsButton.setOnClickListener {
-            // Handle Academics button click
+            val intent = Intent(this, SectionA::class.java)
+            startActivity(intent)
         }
 
         aboutCollegeButton.setOnClickListener {
-            // Handle About College button click
+            val intent = Intent(this, College::class.java)
+            startActivity(intent)
         }
     }
     private fun dispatchTakePictureIntent() {

@@ -19,5 +19,5 @@
     <color name="primaryDarkColor">#1565C0</color>
     <color name="accentColor">#FF4081</color>
     <color name="textColor">#FFFFFF</color>
-
+    <color name="special">#D9D9D9</color>
 </resources>

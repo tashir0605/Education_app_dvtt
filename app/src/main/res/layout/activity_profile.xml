@@ -30,31 +30,28 @@
         android:textSize="18sp"
         android:textStyle="bold" />
 </RelativeLayout>
-
-    <Button
-        android:id="@+id/academicsButton"
+    <TextView
         android:textSize="25sp"
+        android:id="@+id/academicsButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/profileImageView"
         android:layout_marginTop="20dp"
+        android:text="Academics"
         android:padding="25sp"
         android:background="@drawable/roundcorner"
-        android:text="Academics"
         android:textColor="@android:color/white" />
 
-    <Button
-        android:id="@+id/aboutCollegeButton"
+    <TextView
         android:textSize="25sp"
+        android:id="@+id/aboutCollegeButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/academicsButton"
         android:layout_marginTop="12sp"
-        android:padding="25sp"
-        android:backgroundTint="@color/primaryColor"
-        android:background="@drawable/roundcorner"
         android:text="About College"
-        android:textColor="@color/textColor" />
+        android:padding="25sp"
+        android:background="@drawable/roundcorner"
+        android:textColor="@android:color/white" />
+
 
 
 </LinearLayout>

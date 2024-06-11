@@ -39,7 +39,9 @@ class MainActivity : AppCompatActivity() {
                 val intent = Intent(this, ProfileActivity::class.java).apply {
                     putExtra("USERNAME", username)
                 }
+
                 startActivity(intent)
+
             }
              else {
                 Toast.makeText(this, "Invalid Credentials", Toast.LENGTH_SHORT).show()
