@@ -39,7 +39,8 @@ class ProfileActivity : AppCompatActivity() {
 
         // Set up buttons for navigating to other activities
         academicsButton.setOnClickListener {
-            val intent = Intent(this, SectionA::class.java)
+            val intent = Intent(this,
+                SectionA::class.java)
             startActivity(intent)
         }
 

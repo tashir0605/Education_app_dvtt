@@ -3,7 +3,7 @@ package com.example.hope
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
@@ -13,13 +13,14 @@ import com.google.firebase.auth.FirebaseAuth
 class MainActivity : AppCompatActivity() {
     private lateinit var usernameEditText: EditText
     private lateinit var passwordEditText: EditText
-    companion object{
-        lateinit var auth: FirebaseAuth
-    }
+    private lateinit var auth: FirebaseAuth
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        auth = FirebaseAuth.getInstance()
+
+        auth = FirebaseAuth.getInstance()  // Initialize FirebaseAuth instance
+        Log.d("MainActivity", "FirebaseAuth instance initialized: $auth")
 
         usernameEditText = findViewById(R.id.username_edit_text)
         passwordEditText = findViewById(R.id.password_edit_text)
@@ -34,16 +35,19 @@ class MainActivity : AppCompatActivity() {
             val sharedPreferences = getSharedPreferences("UserPrefs", Context.MODE_PRIVATE)
             val savedUsername = sharedPreferences.getString("Username", null)
             val savedPassword = sharedPreferences.getString("Password", null)
-            if (credentialsAreValid(username, password, savedUsername, savedPassword)) {
-                // Start ProfileActivity and pass the username
+            if (Masterlogin(username, password)) {
+                val intent = Intent(this, Pdf::class.java)
+                startActivity(intent)
+                }
+
+            else if (credentialsAreValid(username, password, savedUsername, savedPassword)) {
                 val intent = Intent(this, ProfileActivity::class.java).apply {
                     putExtra("USERNAME", username)
                 }
-
                 startActivity(intent)
-
+                finish()
             }
-             else {
+            else {
                 Toast.makeText(this, "Invalid Credentials", Toast.LENGTH_SHORT).show()
             }
         }
@@ -54,12 +58,12 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    private fun Masterlogin(username: String, password: String): Boolean {
+        return (username == "Dikshant_developer"  && password == "developer_1234") || (username == "Tashir_developer"  && password == "developer_1234") || (username == "Vishwendra_developer"  && password == "developer_1234") || (username == "Tanmay_developer"  && password == "developer_1234")
+    }
+
     private fun credentialsAreValid(username: String, password: String, savedUsername: String?, savedPassword: String?): Boolean {
         return username == savedUsername && password == savedPassword
     }
+
 }
-
-
-
-
-

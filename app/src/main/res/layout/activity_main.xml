@@ -42,13 +42,14 @@
         android:orientation="vertical">
 
 
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/logo"
-            android:layout_width="165dp"
-            android:layout_height="134dp"
-            android:src="@drawable/logo"
-            app:civ_border_color="@color/white"
-            app:civ_border_width="2dp" />
+<!--        <de.hdodenhof.circleimageview.CircleImageView-->
+<!--            android:id="@+id/logo"-->
+<!--            android:layout_width="165dp"-->
+<!--            android:layout_height="134dp"-->
+<!--            android:src="@drawable/logo"-->
+<!--            app:civ_border_color="@color/white"-->
+<!--            app:civ_border_width="2dp"-->
+<!--             />-->
     </LinearLayout>
 
     <EditText

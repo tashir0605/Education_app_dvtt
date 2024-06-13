@@ -15,12 +15,11 @@ class SectionA : AppCompatActivity() {
         setContentView(R.layout.activity_section)
 
 
-
-
         val secondpagebutton = findViewById<TextView>(R.id.button_b)
         secondpagebutton.setOnClickListener {
             val intent = Intent(this, SectionB::class.java)
             startActivity(intent)
+
         }
     }
 }

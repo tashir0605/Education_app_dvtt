@@ -13,7 +13,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.hope.GenericActivity
 import com.example.hope.generic2
 import com.example.hope.generic3
-
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.firestore.FirebaseFirestore
+private lateinit var dbRef: DatabaseReference
 class RecyclerViewMovieAdapter(
     private val getActivity: AppCompatActivity,
     private val movieLists: List<Movie>
@@ -34,24 +37,25 @@ class RecyclerViewMovieAdapter(
         holder.tvMovieTitle.text = movie.title
         holder.ivMovieImg.setImageResource(movie.image)
         holder.itemView.setOnClickListener {
-
             when (movie.title) {
                 "Dramebaaz","Quiz Society", "Pheme" , "Shutterbugs", "Raw", "Tgt", "Sangam", "Framex", "Ateliers", "Designerds", "Automobile Society" -> {
                     val intent : Intent
                     intent = Intent(getActivity, GenericActivity::class.java)
                     when (movie.title) {
                         "Dramebaaz" -> {
-                            intent.putExtra("mainheading", "Dramebaaz")
+
+                            dbRef = FirebaseDatabase.getInstance().getReference("hoKOsgBNAs6iTF6nN9rj")
+                            intent.putExtra("mainheading", "Heading")
                             intent.putExtra("mainimage", R.drawable.dramebaaz)
                             intent.putExtra(
                                 "role",
-                                "Role:Dramebazz, the Drama Society of IIT Jodhpur, is a vibrant community dedicated to the art of theatre and performance. Our society provides a platform for students to explore various aspects of drama, improve their acting skills, and express their creativity through compelling storytelling and performances."
+                                "Role"
                             )
-                            intent.putExtra("secyname", "Siddharth Chauhan")
+                            intent.putExtra("secyname", "Secretary")
                             intent.putExtra("secyimg", R.drawable.siddharthch)
-                            intent.putExtra("joinsecyname1", "Tanushree")
+                            intent.putExtra("joinsecyname1", "Join Secretary1")
                             intent.putExtra("joinsecyimg1", R.drawable.photoun)
-                            intent.putExtra("joinsecyname2", "Swasti Bahette")
+                            intent.putExtra("joinsecyname2", "Join Secretary2")
                             intent.putExtra("joinsecyimg2", R.drawable.photoun)
 
                         }
@@ -201,7 +205,6 @@ class RecyclerViewMovieAdapter(
 
                         }
 
-
                         "Automobile Society" -> {
                             intent.putExtra("mainheading", "Automobile Society")
                             intent.putExtra("mainimage", R.drawable.bolthead)
@@ -254,7 +257,6 @@ class RecyclerViewMovieAdapter(
 
 
                         }
-
                         "INSIDE" -> {
                             intent.putExtra("mainheading", "INSIDE")
                             intent.putExtra("mainimage", R.drawable.inside)
@@ -333,7 +335,7 @@ class RecyclerViewMovieAdapter(
                     getActivity.startActivity(intent)
                 }
 
-                "Badminton Society" -> {
+               "Weightlifting Society","Badminton Society","Hockey Society" ,"Basketball Society" ,"Chess Society" ,"Cricket Society", "E-Sports Society" ,"Kabaddi Society" ,"VolleyBall Society" ,"Table Tennis Society", "Squash Society", "Lawn Tennis Society" , "Athletic Society" -> {
                     val intent : Intent
                     intent = Intent(getActivity, generic3::class.java)
 
@@ -341,7 +343,8 @@ class RecyclerViewMovieAdapter(
                         "Badminton Society" -> {
                             intent.putExtra("mainheading", "Badminton Society")
                             intent.putExtra("mainimage", R.drawable.photoun)
-                            intent.putExtra("role", "Ro" )
+                            intent.putExtra(
+                                "role", "The Badminton Society promotes physical fitness and sportsmanship through regular practice sessions, tournaments, and training workshops. It provides a platform for students to improve their skills, compete, and enjoy the sport in a supportive and energetic environment." )
                             intent.putExtra("secyname" , "Manas Dwivedi")
                             intent.putExtra("secyimg", R.drawable.photoun)
                             intent.putExtra("capname" , "Sukhmanpreet Singh Sandhu")
@@ -350,6 +353,186 @@ class RecyclerViewMovieAdapter(
                             intent.putExtra("vcapimg", R.drawable.photoun)
                             intent.putExtra("capname2" , "Sanika Deshmukh")
                             intent.putExtra("capimg2", R.drawable.photoun)
+                        }
+
+
+                        "Athletic Society" -> {
+                            intent.putExtra("mainheading", "Athletic Society")
+                            intent.putExtra("mainimage", R.drawable.photoun)
+                            intent.putExtra(
+                                "role", "The Badminton Society promotes physical fitness and sportsmanship through regular practice sessions, tournaments, and training workshops. It provides a platform for students to improve their skills, compete, and enjoy the sport in a supportive and energetic environment." )
+                            intent.putExtra("secyname" , "Krishna Dev Solanki")
+                            intent.putExtra("secyimg", R.drawable.photoun)
+                            intent.putExtra("capname" , "Uthaya Rajan")
+                            intent.putExtra("capimg", R.drawable.photoun)
+                            intent.putExtra("vcapname" , "Nishu Kumar")
+                            intent.putExtra("vcapimg", R.drawable.photoun)
+                            intent.putExtra("capname2" , "Pooja Porwal")
+                            intent.putExtra("capimg2", R.drawable.photoun)
+                            intent.putExtra("vcapname2" , "Renu Sankhla")
+                            intent.putExtra("vcapimg2", R.drawable.photoun)
+                        }
+                        "Weightlifting Society" -> {
+                            intent.putExtra("mainheading", "Weightlifting Society")
+                            intent.putExtra("mainimage", R.drawable.photoun)
+                            intent.putExtra(
+                                "role", "The Badminton Society promotes physical fitness and sportsmanship through regular practice sessions, tournaments, and training workshops. It provides a platform for students to improve their skills, compete, and enjoy the sport in a supportive and energetic environment." )
+                            intent.putExtra("secyname" , "Manoj Khichar")
+                            intent.putExtra("secyimg", R.drawable.photoun)
+                            intent.putExtra("capname" , "Nitin Shankhala")
+                            intent.putExtra("capimg", R.drawable.photoun)
+                            intent.putExtra("vcapname" , "Amit Singh")
+                            intent.putExtra("vcapimg", R.drawable.photoun)
+                        }
+
+
+                        "Basketball Society" -> {
+                            intent.putExtra("mainheading", "Basketball Society")
+                            intent.putExtra("mainimage", R.drawable.photoun)
+                            intent.putExtra(
+                                "role", "The Basketball Society promotes physical fitness and teamwork through regular practice sessions, matches, and tournaments. It offers a platform for students to develop their skills, compete at various levels, and foster a spirit of sportsmanship." )
+                            intent.putExtra("secyname" , "Vilok Parkhi")
+                            intent.putExtra("secyimg", R.drawable.photoun)
+                            intent.putExtra("capname" , "Karan b Shisode")
+                            intent.putExtra("capimg", R.drawable.photoun)
+                            intent.putExtra("vcapname" , "Deepanshu")
+                            intent.putExtra("vcapimg", R.drawable.photoun)
+                            intent.putExtra("capname2" , "Vellore Sahithi")
+                            intent.putExtra("capimg2", R.drawable.photoun)
+                            intent.putExtra("vcapname2" , "Princy Gautam")
+                            intent.putExtra("vcapimg2", R.drawable.photoun)
+                        }
+
+
+
+
+                        "Chess Society" -> {
+                            intent.putExtra("mainheading", "Chess Society")
+                            intent.putExtra("mainimage", R.drawable.photoun)
+                            intent.putExtra(
+                                "role", "The Chess Society nurtures strategic thinking and cognitive skills. It organizes regular games, tournaments, and strategy workshops, providing a space for students to improve their chess abilities, engage in competitive play, and enjoy intellectual challenges." )
+                            intent.putExtra("secyname" , "Mayank")
+                            intent.putExtra("secyimg", R.drawable.photoun)
+                            intent.putExtra("capname" , "Chakshu Dhannawat")
+                            intent.putExtra("capimg", R.drawable.photoun)
+                            intent.putExtra("vcapname" , "Umashankar Prajapati")
+                            intent.putExtra("vcapimg", R.drawable.photoun) }
+
+
+
+                        "Cricket Society" -> {
+                            intent.putExtra("mainheading", "Cricket Society")
+                            intent.putExtra("mainimage", R.drawable.photoun)
+                            intent.putExtra(
+                                "role", "The Chess Society nurtures strategic thinking and cognitive skills. It organizes regular games, tournaments, and strategy workshops, providing a space for students to improve their chess abilities, engage in competitive play, and enjoy intellectual challenges." )
+                            intent.putExtra("secyname" , "Aniket Devaliya")
+                            intent.putExtra("secyimg", R.drawable.photoun)
+                            intent.putExtra("capname" , "Parth Mistry")
+                            intent.putExtra("capimg", R.drawable.photoun)
+                            intent.putExtra("vcapname" , "Neehal Bajaj")
+                            intent.putExtra("vcapimg", R.drawable.photoun) }
+
+
+
+                        "E-Sports Society" -> {
+                            intent.putExtra("mainheading", "E-Sports Society")
+                            intent.putExtra("mainimage", R.drawable.photoun)
+                            intent.putExtra(
+                                "role", "The E-Sports Club promotes competitive gaming and strategic thinking through tournaments, practice sessions, and events. It offers a platform for students to improve their gaming skills, collaborate in teams, and engage in a growing e-sports community." )
+                            intent.putExtra("secyname" , "Arman Garg")
+                            intent.putExtra("secyimg", R.drawable.photoun)
+                            intent.putExtra("capname" , "Dhruv Kumar Singh")
+                            intent.putExtra("capimg", R.drawable.photoun)
+                            intent.putExtra("vcapname" , "Rudraksh Solanki")
+                            intent.putExtra("vcapimg", R.drawable.photoun) }
+
+
+                        "Kabaddi Society" -> {
+                            intent.putExtra("mainheading", "Kabaddi Society")
+                            intent.putExtra("mainimage", R.drawable.photoun)
+                            intent.putExtra(
+                                "role", "The Kabaddi Club fosters physical fitness and teamwork through regular practice, matches, and tournaments. It provides students with opportunities to develop their kabaddi skills, engage in competitive play, and build a strong sense of sportsmanship and camaraderie." )
+                            intent.putExtra("secyname" , "Rohitash Bishnoi")
+                            intent.putExtra("secyimg", R.drawable.photoun)
+                            intent.putExtra("capname" , "Abhishek Kumar")
+                            intent.putExtra("capimg", R.drawable.photoun)
+                            intent.putExtra("vcapname" , "Aditya Trivedi")
+                            intent.putExtra("vcapimg", R.drawable.photoun) }
+
+
+                        "VolleyBall Society" -> {
+                            intent.putExtra("mainheading", "VolleyBall Society")
+                            intent.putExtra("mainimage", R.drawable.photoun)
+                            intent.putExtra(
+                                "role", "The Volleyball Society fosters physical fitness and team spirit. It organizes training sessions, matches, and tournaments, enabling students to develop their volleyball skills, enjoy the sport, and participate in competitive and recreational play." )
+                            intent.putExtra("secyname" , "Surya")
+                            intent.putExtra("secyimg", R.drawable.photoun)
+                            intent.putExtra("capname" , "Sabavathi Purya")
+                            intent.putExtra("capimg", R.drawable.photoun)
+                            intent.putExtra("vcapname" , "Sushant Chivale")
+                            intent.putExtra("vcapimg", R.drawable.photoun)
+                            intent.putExtra("capname2" , "Sharmila Noudu")
+                            intent.putExtra("capimg2", R.drawable.photoun)
+                            intent.putExtra("vcapname2" , "Rifa Khan")
+                            intent.putExtra("vcapimg2", R.drawable.photoun)
+                        }
+
+
+
+
+
+                        "Table Tennis Society" -> {
+                            intent.putExtra("mainheading", "Table Tennis Society")
+                            intent.putExtra("mainimage", R.drawable.photoun)
+                            intent.putExtra(
+                                "role", "The Table Tennis Society enhances agility and concentration through regular practice sessions, friendly matches, and competitions. It offers students a platform to improve their table tennis skills, engage in competitive play, and enjoy the sport." )
+
+                            intent.putExtra("secyname" , "Jatin")
+                            intent.putExtra("secyimg", R.drawable.photoun)
+                            intent.putExtra("capname" , "Soham Pandya")
+                            intent.putExtra("capimg", R.drawable.photoun)
+                            intent.putExtra("vcapname" , "Paras Kumar")
+                            intent.putExtra("vcapimg", R.drawable.photoun)
+                            intent.putExtra("wcapname2" , "Divya Shiva Kumar")
+                            intent.putExtra("wcapimg2", R.drawable.photoun)
+                            intent.putExtra("vcapname2" , "Prarthna Saika")
+                            intent.putExtra("vcapimg2", R.drawable.photoun)
+                        }
+
+                        "Squash Club" -> {
+                            intent.putExtra("mainheading", "Squash Club")
+                            intent.putExtra("mainimage", R.drawable.photoun)
+                            intent.putExtra(
+                                "role", "The Squash Club promotes agility and endurance through training sessions, friendly matches, and competitions. It offers a platform for students to enhance their squash skills, compete at various levels, and enjoy the sport in a supportive and energetic environment." )
+                            intent.putExtra("secyname" , "Dhruv Gupta")
+                            intent.putExtra("secyimg", R.drawable.photoun)
+                            intent.putExtra("capname" , "Shubham Vaishnav")
+                            intent.putExtra("capimg", R.drawable.photoun)
+                            intent.putExtra("vcapname" , "Varun Desai")
+                            intent.putExtra("vcapimg", R.drawable.photoun)
+                            intent.putExtra("capname2" , "Madhavi Lathar")
+                            intent.putExtra("capimg2", R.drawable.photoun)
+                            intent.putExtra("vcapname2" , "Ayushi Rathi")
+                            intent.putExtra("vcapimg2", R.drawable.photoun)
+                        }
+
+
+
+                        "Lawn Tennis Society" -> {
+                            intent.putExtra("mainheading", "Lawn Tennis Society")
+                            intent.putExtra("mainimage", R.drawable.photoun)
+                            intent.putExtra(
+                                "role", "The Lawn Tennis Society promotes physical fitness and skill development through training sessions, matches, and tournaments. It provides a venue for students to enhance their tennis abilities, compete at various levels, and enjoy the sport in a supportive environment." )
+                            intent.putExtra("secyname" , "Prajwal Sonale")
+                            intent.putExtra("secyimg", R.drawable.photoun)
+                            intent.putExtra("capname" , "Jayant Sorte")
+                            intent.putExtra("capimg", R.drawable.photoun)
+                            intent.putExtra("vcapname" , "Ribhav Manish")
+                            intent.putExtra("vcapimg", R.drawable.photoun)
+                            intent.putExtra("capname2" , "Mansi")
+                            intent.putExtra("capimg2", R.drawable.photoun)
+                            intent.putExtra("vcapname" , "Anupama Birman")
+                            intent.putExtra("vcapimg", R.drawable.photoun)
                         }
                     }
 

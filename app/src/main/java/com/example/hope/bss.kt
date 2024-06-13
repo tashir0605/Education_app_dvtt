@@ -54,7 +54,7 @@ class bss : AppCompatActivity() {
         movieList.add(movie)
         movie = Movie("Table Tennis Society", R.drawable.attelies)
         movieList.add(movie)
-        movie = Movie("Volleyball Society", R.drawable.raw)
+        movie = Movie("VolleyBall Society", R.drawable.raw)
         movieList.add(movie)
         movie = Movie("Weightlifting Society", R.drawable.dramebaaz)
         movieList.add(movie)
