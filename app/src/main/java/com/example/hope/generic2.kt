@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import com.bumptech.glide.Glide
 import com.example.hope.R
 
 class generic2 : AppCompatActivity() {
@@ -13,12 +14,12 @@ class generic2 : AppCompatActivity() {
         setContentView(R.layout.activity_generic2)
 
         val heading = intent.getStringExtra("mainheading")
-        val image = intent.getIntExtra("mainimage", 0)
+        val image = intent.getStringExtra("mainimage")
         val role = intent.getStringExtra("role")
         val coordinator1 = intent.getStringExtra("codname1")
-        val coordinator1img = intent.getIntExtra("codimg1", 0)
+        val coordinatorImgUrl1 = intent.getStringExtra("codimg1")
         val coordinator2 = intent.getStringExtra("codname2")
-        val coordinator2img = intent.getIntExtra("codimg2", 0)
+        val coordinatorImgUrl2 = intent.getStringExtra("codimg2")
 
         val headingTextView: TextView = findViewById(R.id.headingofbcca)
         val roleofclub: TextView = findViewById(R.id.roleofbcca)
@@ -30,10 +31,16 @@ class generic2 : AppCompatActivity() {
 
         headingTextView.text = heading
         roleofclub.text = role
-        imageView.setImageResource(image)
+        Glide.with(this)
+            .load(coordinatorImgUrl1)
+            .into(codImg)
         cod.text = coordinator1
-        codImg.setImageResource(coordinator1img)
+        Glide.with(this)
+            .load(coordinatorImgUrl2)
+            .into(codImg2)
         cod2.text = coordinator2
-        codImg2.setImageResource(coordinator2img)
+        Glide.with(this)
+            .load(image)
+            .into(imageView)
     }
 }

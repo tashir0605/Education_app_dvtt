@@ -7,6 +7,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:fillViewport="true"
     >
+
     <LinearLayout
         android:id="@+id/main"
         android:layout_width="match_parent"
@@ -74,10 +75,9 @@
 
             <ImageView
                 android:id="@+id/image1"
-                android:layout_width="70dp"
-                android:layout_height="90dp"
+                android:layout_width="109dp"
+                android:layout_height="161dp"
                 android:layout_marginTop="23dp"
-                android:src="@drawable/bha"
                 app:layout_constraintLeft_toLeftOf="@id/heading1"
                 app:layout_constraintTop_toBottomOf="@+id/heading1" />
 
@@ -85,7 +85,6 @@
                 android:id="@+id/subheading1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Vice-president: Ritesh fageria"
                 android:textSize="12sp"
                 app:layout_constraintLeft_toRightOf="@id/image1"
                 app:layout_constraintRight_toRightOf="@id/heading1"
@@ -108,7 +107,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="4dp"
                 android:scrollHorizontally="false"
-                android:text="It make bridge between Academics and Students"
                 android:textSize="10sp"
                 app:layout_constraintLeft_toRightOf="@id/body1Role"
 
@@ -145,20 +143,18 @@
                 >
 
             </TextView>
+
             <ImageView
-                android:layout_width="70dp"
-                android:layout_height="90dp"
-                app:layout_constraintLeft_toLeftOf="@id/heading2"
-                app:layout_constraintTop_toBottomOf="@+id/heading2"
-                android:layout_marginTop="23dp"
                 android:id="@+id/image2"
-                android:src="@drawable/sac"
-                />
+                android:layout_width="109dp"
+                android:layout_height="161dp"
+                android:layout_marginTop="23dp"
+                app:layout_constraintLeft_toLeftOf="@id/heading2"
+                app:layout_constraintTop_toBottomOf="@+id/heading2" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/subheading2"
-                android:text="Vice-President: Sidhhart Bajaj"
                 app:layout_constraintTop_toBottomOf="@id/heading2"
                 app:layout_constraintLeft_toRightOf="@id/image2"
                 app:layout_constraintTop_toTopOf="@id/image2"
@@ -181,7 +177,7 @@
                 android:layout_width="160dp"
                 android:layout_height="wrap_content"
                 android:scrollHorizontally="false"
-                android:text="It make bridge between Academics and Students"
+
                 android:textSize="10sp"
                 android:layout_marginLeft="4dp"
                 app:layout_constraintLeft_toRightOf="@id/body2Role"
@@ -215,21 +211,20 @@
                 android:textAlignment="center"
                 android:paddingVertical="4dp"
                 />
+
             <ImageView
-                android:layout_width="70dp"
-                android:layout_height="90dp"
-                app:layout_constraintLeft_toLeftOf="@id/heading3"
-                app:layout_constraintTop_toBottomOf="@+id/heading3"
-                android:layout_marginTop="23dp"
                 android:id="@+id/image3"
-                android:src="@drawable/image1"
-                />
+                android:layout_width="109dp"
+                android:layout_height="161dp"
+                android:layout_marginTop="23dp"
+                app:layout_constraintLeft_toLeftOf="@id/heading3"
+                app:layout_constraintTop_toBottomOf="@+id/heading3" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/subheading3"
-                android:text="Vice-president: Ashish aditya"
+
                 app:layout_constraintTop_toBottomOf="@id/heading3"
                 app:layout_constraintLeft_toRightOf="@id/image3"
                 app:layout_constraintTop_toTopOf="@id/image3"
@@ -253,7 +248,7 @@
                 android:layout_width="160dp"
                 android:layout_height="wrap_content"
                 android:scrollHorizontally="false"
-                android:text="It make bridge between Academics and Students"
+
                 android:textSize="10sp"
                 android:layout_marginLeft="4dp"
                 app:layout_constraintLeft_toRightOf="@id/body3Role"
@@ -288,13 +283,12 @@
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
             <ImageView
-                android:layout_width="70dp"
-                android:layout_height="90dp"
+                android:layout_width="109dp"
+                android:layout_height="161dp"
                 app:layout_constraintLeft_toLeftOf="@id/heading4"
                 app:layout_constraintTop_toBottomOf="@+id/heading4"
                 android:layout_marginTop="23dp"
                 android:id="@+id/image4"
-                android:src="@drawable/image1"
                 />
 
 
@@ -305,7 +299,7 @@
                 android:layout_marginStart="92dp"
 
                 android:layout_marginTop="16dp"
-                android:text="Vice-president: Manas chechani"
+
                 android:textSize="12sp"
                 app:layout_constraintStart_toEndOf="@+id/image4"
                 app:layout_constraintTop_toBottomOf="@+id/heading4" />
@@ -326,7 +320,7 @@
                 android:layout_width="160dp"
                 android:layout_height="wrap_content"
                 android:scrollHorizontally="false"
-                android:text="It make bridge between Academics and Students"
+
                 android:textSize="10sp"
                 android:layout_marginLeft="4dp"
                 app:layout_constraintLeft_toRightOf="@id/body4Role"
@@ -362,13 +356,12 @@
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
             <ImageView
-                android:layout_width="70dp"
-                android:layout_height="90dp"
+                android:layout_width="109dp"
+                android:layout_height="161dp"
                 app:layout_constraintLeft_toLeftOf="@id/heading5"
                 app:layout_constraintTop_toBottomOf="@+id/heading5"
                 android:layout_marginTop="23dp"
                 android:id="@+id/image5"
-                android:src="@drawable/bsw"
                 />
 
 
@@ -379,7 +372,7 @@
                 android:layout_marginStart="100dp"
 
                 android:layout_marginTop="16dp"
-                android:text="Vice-president: Manas dwivedi"
+
                 android:textSize="12sp"
                 app:layout_constraintStart_toEndOf="@+id/image5"
                 app:layout_constraintTop_toBottomOf="@+id/heading5" />
@@ -400,7 +393,7 @@
                 android:layout_width="160dp"
                 android:layout_height="wrap_content"
                 android:scrollHorizontally="false"
-                android:text="It make bridge between Academics and Students"
+
                 android:textSize="10sp"
                 android:layout_marginLeft="4dp"
                 app:layout_constraintLeft_toRightOf="@id/body5Role"

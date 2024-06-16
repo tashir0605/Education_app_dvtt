@@ -21,5 +21,30 @@ class SectionA : AppCompatActivity() {
             startActivity(intent)
 
         }
+        val biobutton = findViewById<TextView>(R.id.button_bio)
+        biobutton.setOnClickListener {
+            val intent = Intent(this, ib::class.java)
+            startActivity(intent)
+
+        }
+        val icbutton = findViewById<TextView>(R.id.button_computer)
+        icbutton.setOnClickListener {
+            val intent = Intent(this, ics::class.java)
+            startActivity(intent)
+
+        }
+        val ieebutton = findViewById<TextView>(R.id.button_electrical)
+        ieebutton.setOnClickListener {
+            val intent = Intent(this, iee::class.java)
+            startActivity(intent)
+
+        }
+
+        val mathbutton = findViewById<TextView>(R.id.button_math)
+        mathbutton.setOnClickListener {
+            val intent = Intent(this, math::class.java)
+            startActivity(intent)
+
+        }
     }
 }

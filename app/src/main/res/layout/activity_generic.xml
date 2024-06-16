@@ -92,8 +92,8 @@
                 />
 
             <ImageView
-                android:layout_width="100dp"
-                android:layout_height="140dp"
+                android:layout_width="200dp"
+                android:layout_height="280dp"
                 android:layout_gravity="center_horizontal"
                 android:id="@+id/secyimg" />
 
@@ -131,8 +131,8 @@
 
 
             <ImageView
-                android:layout_width="100dp"
-                android:layout_height="140dp"
+                android:layout_width="200dp"
+                android:layout_height="280dp"
                 android:id="@+id/joinsecyimg1"
 
 
@@ -150,8 +150,8 @@
                 />
 
             <ImageView
-                android:layout_width="100dp"
-                android:layout_height="140dp"
+                android:layout_width="200dp"
+                android:layout_height="280dp"
                 android:id="@+id/joinsecyimg2"
 
                 />
@@ -169,8 +169,8 @@
 
 
             <ImageView
-                android:layout_width="100dp"
-                android:layout_height="140dp"
+                android:layout_width="200dp"
+                android:layout_height="280dp"
                 android:id="@+id/joinsecyimg3"
 
 

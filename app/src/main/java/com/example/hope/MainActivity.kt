@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity() {
             val savedUsername = sharedPreferences.getString("Username", null)
             val savedPassword = sharedPreferences.getString("Password", null)
             if (Masterlogin(username, password)) {
-                val intent = Intent(this, Pdf::class.java)
+                val intent = Intent(this, imageUploader::class.java)
                 startActivity(intent)
                 }
 

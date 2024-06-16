@@ -89,4 +89,9 @@ apply(plugin = "com.google.gms.google-services")
 dependencies{
     implementation(libs.firebase.database.ktx)
     implementation("com.github.barteksc:android-pdf-viewer:2.8.2")
+    implementation ("com.squareup.okhttp3:okhttp:4.9.0")
+}
+dependencies {
+    implementation ("com.github.bumptech.glide:glide:4.12.0")
+    annotationProcessor ("com.github.bumptech.glide:compiler:4.12.0")
 }

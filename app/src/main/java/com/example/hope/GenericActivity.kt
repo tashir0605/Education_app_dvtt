@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import com.bumptech.glide.Glide
 import com.example.hope.R
 
 class GenericActivity : AppCompatActivity() {
@@ -12,16 +13,16 @@ class GenericActivity : AppCompatActivity() {
         setContentView(R.layout.activity_generic)
 
         val heading = intent.getStringExtra("mainheading")
-        val image = intent.getIntExtra("mainimage", 0)
+        val image = intent.getStringExtra("mainimage")
         val role = intent.getStringExtra("role")
         val secyname = intent.getStringExtra("secyname")
-        val secyimage = intent.getIntExtra("secyimg", 0)
+        val secyImageUrl = intent.getStringExtra("secyimg")
         val joinsecyname1 = intent.getStringExtra("joinsecyname1")
-        val joinsecyimage1 = intent.getIntExtra("joinsecyimg1", 0)
+        val joinsecyImgUrl1 = intent.getStringExtra("joinsecyimg1")
         val joinsecyname2 = intent.getStringExtra("joinsecyname2")
-        val joinsecyimage2 = intent.getIntExtra("joinsecyimg2", 0)
+        val joinsecyImgUrl2 = intent.getStringExtra("joinsecyimg2")
         val joinsecyname3 = intent.getStringExtra("joinsecyname3")
-        val joinsecyimage3 = intent.getIntExtra("joinsecyimg3", 0)
+        val joinsecyImgUrl3 = intent.getStringExtra("joinsecyimg3")
 
         val headingTextView: TextView = findViewById(R.id.mainHeading)
         val roleofclub: TextView= findViewById(R.id.role)
@@ -37,14 +38,24 @@ class GenericActivity : AppCompatActivity() {
 
         headingTextView.text = heading
         roleofclub.text = role
-        imageView.setImageResource(image)
+        Glide.with(this)
+            .load(image)
+            .into(imageView)
+        Glide.with(this)
+            .load(secyImageUrl)
+            .into(secyImg)
         secy.text = secyname
-        secyImg.setImageResource(secyimage)
         joinSecy1.text = joinsecyname1
-        joinSecyImg1.setImageResource(joinsecyimage1)
+        Glide.with(this)
+            .load(joinsecyImgUrl1)
+            .into(joinSecyImg1)
         joinSecy2.text = joinsecyname2
-        joinSecyImg2.setImageResource(joinsecyimage2)
+        Glide.with(this)
+            .load(joinsecyImgUrl2)
+            .into(joinSecyImg2)
         joinSecy3.text = joinsecyname3
-        joinSecyImg3.setImageResource(joinsecyimage3)
+        Glide.with(this)
+            .load(joinsecyImgUrl3)
+            .into(joinSecyImg3)
     }
 }

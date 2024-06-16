@@ -66,7 +66,6 @@
             android:layout_marginLeft="36dp"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="20dp"
-            android:src="@drawable/image2"
             app:layout_constraintLeft_toLeftOf="@id/heading1"
             app:layout_constraintTop_toBottomOf="@+id/heading1" />
 
@@ -75,8 +74,6 @@
             android:layout_width="160dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-
-            android:text="Genral Secretary: Dhyan Naik"
             android:textSize="12sp"
             app:layout_constraintEnd_toEndOf="@+id/heading1"
             app:layout_constraintStart_toEndOf="@+id/image1"
@@ -98,23 +95,11 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="4dp"
             android:scrollHorizontally="false"
-            android:text="Role"
             android:textSize="10sp"
             app:layout_constraintLeft_toRightOf="@id/body1Role"
 
             app:layout_constraintTop_toTopOf="@id/body1Role" />
 
-        <!--    <ImageButton-->
-        <!--        android:layout_width="24dp"-->
-        <!--        android:layout_height="24dp"-->
-
-        <!--        android:background="none"-->
-        <!--        android:src="@drawable/threedots"-->
-
-        <!--        app:layout_constraintBottom_toBottomOf="parent"-->
-        <!--        app:layout_constraintRight_toRightOf="parent">-->
-
-        <!--    </ImageButton>-->
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -156,7 +141,6 @@
             app:layout_constraintTop_toBottomOf="@+id/heading2"
 
             android:id="@+id/image2"
-            android:src="@drawable/image3"
             />
 
         <TextView
@@ -164,7 +148,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
-            android:text="Genral Secretary: To be decided"
             android:textSize="12sp"
             app:layout_constraintLeft_toRightOf="@id/image2"
             app:layout_constraintRight_toRightOf="@id/heading2"
@@ -186,23 +169,13 @@
             android:layout_width="160dp"
             android:layout_height="wrap_content"
             android:scrollHorizontally="false"
-            android:text="It make bridge between Academics and Students"
+
             android:textSize="10sp"
             android:layout_marginLeft="4dp"
             app:layout_constraintLeft_toRightOf="@id/body2Role"
             app:layout_constraintTop_toTopOf="@id/body2Role"
             />
 
-        <!--        <ImageButton-->
-        <!--            android:layout_width="24dp"-->
-        <!--            android:layout_height="24dp"-->
-        <!--            android:background="none"-->
-        <!--            android:src="@drawable/threedots"-->
-        <!--            app:layout_constraintRight_toRightOf="parent"-->
-        <!--            app:layout_constraintBottom_toBottomOf="parent"-->
-        <!--            >-->
-
-        <!--        </ImageButton>-->
 
     </androidx.constraintlayout.widget.ConstraintLayout>
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -239,7 +212,6 @@
             app:layout_constraintTop_toBottomOf="@+id/heading3"
 
             android:id="@+id/image3"
-            android:src="@drawable/image1"
             />
 
         <TextView
@@ -248,9 +220,10 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
 
-            android:text="Genral Secretary: Shashank Asthana"
+
             android:textSize="12sp"
             app:layout_constraintEnd_toEndOf="@+id/heading3"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toEndOf="@+id/image3"
             app:layout_constraintTop_toTopOf="@+id/image3" />
 
@@ -270,7 +243,6 @@
             android:layout_width="160dp"
             android:layout_height="wrap_content"
             android:scrollHorizontally="false"
-            android:text="It make bridge between Academics and Students"
             android:textSize="10sp"
             android:layout_marginLeft="4dp"
             app:layout_constraintLeft_toRightOf="@id/body3Role"
