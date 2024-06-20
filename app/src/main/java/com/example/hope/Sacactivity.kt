@@ -60,7 +60,6 @@ class Sacactivity : AppCompatActivity() {
 
 
 
-
         val bacclick = findViewById<TextView>(R.id.heading2)
         bacclick.setOnClickListener{
             val intent = Intent(this,bac::class.java)
@@ -77,6 +76,12 @@ class Sacactivity : AppCompatActivity() {
         val blaclick = findViewById<TextView>(R.id.heading3)
         blaclick.setOnClickListener{
             val intent = Intent(this,bla::class.java)
+            startActivity(intent)
+        }
+
+        val bswclick=findViewById<TextView>(R.id.heading5)
+        bswclick.setOnClickListener{
+            val intent = Intent(this,bsw::class.java)
             startActivity(intent)
         }
 
@@ -109,7 +114,7 @@ class Sacactivity : AppCompatActivity() {
 
 
                         if (imageUrl1 != null) {
-                            Glide .with(this)
+                            Glide.with(this)
                                 .load(imageUrl1)
                                 .into(image1)
                         }

@@ -17,6 +17,12 @@
         android:theme="@style/Theme.Hope"
         tools:targetApi="31">
         <activity
+            android:name=".NameActivity"
+            android:exported="false" />
+        <activity
+            android:name=".bsw"
+            android:exported="false" />
+        <activity
             android:name=".litsoc"
             android:exported="false" />
         <activity

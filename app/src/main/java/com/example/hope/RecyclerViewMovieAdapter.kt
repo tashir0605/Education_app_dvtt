@@ -17,9 +17,7 @@ class RecyclerViewMovieAdapter(
     private val getActivity: AppCompatActivity,
     private val movieLists: List<Movie>
 ) : RecyclerView.Adapter<RecyclerViewMovieAdapter.MyViewHolder>() {
-
     private val db = FirebaseFirestore.getInstance()
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.layout_movie_list_item, parent, false)
@@ -31,6 +29,7 @@ class RecyclerViewMovieAdapter(
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
+
         val movie = movieLists[position]
         holder.tvMovieTitle.text = movie.title
         holder.ivMovieImg.setImageResource(movie.image)
